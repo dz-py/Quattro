@@ -3,6 +3,9 @@ from board import Board
 def process_move(player, board):
     """ processes a single move """
     print(f"{player}'s turn")
+
+    if player.name == 'AI':
+        print('AI is thinking...')
     
     col = player.next_move(board)
     board.add_checker(player.checker, col)
